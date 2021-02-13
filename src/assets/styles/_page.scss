@@ -1,0 +1,64 @@
+.bot-info {
+  width: 100%;
+
+  .list {
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-collapse: collapse;
+    &-header {
+      border-bottom: 1px solid #000;
+
+      &__item {
+        padding: 10px;
+        margin: 0;
+        text-align: center;
+
+        &.index,
+        &.name {
+          text-align: left;
+        }
+
+        &.delete {
+          align-items: flex-end;
+          text-align: right;
+        }
+      }
+    }
+
+    &-body {
+      transition: 0.2s all;
+      cursor: pointer;
+      background: #fff;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #000;
+      }
+
+      &:active {
+        background: #efefef;
+      }
+
+      &__item {
+        padding: 10px;
+        margin: 0;
+        text-align: center;
+
+        &.index,
+        &.name {
+          text-align: left;
+        }
+
+        &.delete {
+          align-items: flex-end;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.no-info {
+  text-align: center;
+  margin: 20px 0;
+  width: 100%;
+}

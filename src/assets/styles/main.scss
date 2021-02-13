@@ -1,0 +1,97 @@
+//styles
+@import "page";
+@import "modal";
+
+// variables
+$red-color: rgb(212, 37, 37);
+$blue-color: rgb(26, 83, 240);
+$green-color: green;
+$grey-color: rgb(126, 118, 118);
+
+// Normalize
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.btns {
+  border: none;
+  outline: none;
+  font-weight: 500;
+  background: transparent;
+  transition: 0.2s all;
+  padding: 7px 12px;
+  border-radius: 5px;
+
+  &:disabled {
+    filter: grayscale(100%);
+    cursor: not-allowed;
+  }
+
+  &.red {
+    background: $red-color;
+    color: #fff;
+    border: 1px solid $red-color;
+
+    &:hover {
+      background: transparent;
+      color: $red-color;
+    }
+
+    &:active {
+      border: 1px solid transparent;
+    }
+  }
+
+  &.blue {
+    background: $blue-color;
+    color: #fff;
+    border: 1px solid $blue-color;
+
+    &:hover {
+      background: transparent;
+      color: $blue-color;
+    }
+
+    &:active {
+      border: 1px solid transparent;
+    }
+  }
+
+  &.green {
+    background: $green-color;
+    color: #fff;
+    border: 1px solid $green-color;
+
+    &:hover {
+      background: transparent;
+      color: $green-color;
+    }
+
+    &:active {
+      border: 1px solid transparent;
+    }
+  }
+
+  &.grey {
+    background: $grey-color;
+    color: #fff;
+    border: 1px solid $grey-color;
+
+    &:hover {
+      background: transparent;
+      color: $grey-color;
+    }
+
+    &:active {
+      border: 1px solid transparent;
+    }
+  }
+}
