@@ -69,7 +69,7 @@
         <div class="modal-body__date">
           <label class="label" for="datepicker-full-width">Выберите дату</label>
           <b-form-datepicker
-            placeholder="дата не вырана"
+            placeholder="дата не выбрана"
             id="datepicker-full-width"
             v-model="form.date"
             menu-class="w-100"
