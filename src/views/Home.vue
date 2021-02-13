@@ -2,6 +2,9 @@
   <div>
     <div class="home">
       <div class="home-header">
+        <pre>
+          {{ infos }}
+        </pre>
         <h2 class="home-header__title">
           Информации о ботах
         </h2>
@@ -135,11 +138,13 @@ export default {
   },
   methods: {
     submitForm() {
+      let formCopy = { ...this.form };
+      formCopy.images = this.form.images.filter((obj) => obj.file !== null);
       if (!this.edit) {
-        this.$store.commit("SET_INFO", this.form);
+        this.$store.commit("SET_INFO", formCopy);
         this.$bvModal.hide("bot-info");
       } else {
-        this.$store.commit("EDIT_INFO", this.form);
+        this.$store.commit("EDIT_INFO", formCopy);
         this.$bvToast.toast("Успешно изменено", {
           variant: "success",
           autoHideDelay: 5000,
@@ -182,6 +187,10 @@ export default {
       this.form = {
         ...val,
       };
+      this.form.images.push({
+        id: new Date().getTime(),
+        file: null,
+      });
       this.edit = true;
       this.$bvModal.show("bot-info");
     },
