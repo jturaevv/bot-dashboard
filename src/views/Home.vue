@@ -2,9 +2,6 @@
   <div>
     <div class="home">
       <div class="home-header">
-        <pre>
-          {{ infos }}
-        </pre>
         <h2 class="home-header__title">
           Информации о ботах
         </h2>
